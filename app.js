@@ -3,7 +3,7 @@ bodyparser= require("body-parser"),
 methodoverride=require("method-override"),
 app=express(),
 mongoose=require("mongoose");
-mongoose.connect(process.env.DATABASEURL,{useNewUrlParser:true,useUnifiedTopology:true});
+mongoose.connect(process.env.MONGOLAB_URI,{useNewUrlParser:true,useUnifiedTopology:true});
 app.use(express.static("public"));
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
