@@ -100,6 +100,12 @@ app.delete("/blogs/:id",function(req,res){
     })
 });
 
+
+
+app.get("/contact",function(req,res){
+    res.render("contact");
+})
+
 const port= process.env.PORT || 3000;
 
 app.listen(port,process.env.IP);
